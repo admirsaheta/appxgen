@@ -1,20 +1,20 @@
 {
   "name": "appxgen",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "workspaces": [
     "./lib/*",
     "./dev/*"
   ],
   "scripts": {
     "start": "npm run start:next",
-    "start:next": "cd dev/nextjs-project && npm start",
-    "start:react": "cd dev/react-project && npm start",
+    "start:next": "cd dev/appxgen-nextjs && npm start",
+    "start:react": "cd dev/appxgen-nextjs && npm start",
     "dev": "npm run dev:next",
-    "dev:next": "concurrently -k \"cd lib/appxgen && npm run dev\" \"cd dev/nextjs-project && npm run dev\"",
-    "dev:react": "concurrently -k \"cd lib/appxgen && npm run dev\" \"cd dev/react-project && npm run dev\"",
+    "dev:next": "concurrently -k \"cd lib/appxgen && npm run dev\" \"cd dev/appxgen-nextjs && npm run dev\"",
+    "dev:react": "concurrently -k \"cd lib/appxgen && npm run dev\" \"cd dev/appxgen-nextjs && npm run dev\"",
     "build": "npm run build:next",
-    "build:next": "cd lib/appxgen && npm run build && cd ../../dev/nextjs-project && npm run build",
-    "build:react": "cd lib/appxgen && npm run build && cd ../../dev/react-project && npm run build",
+    "build:next": "cd lib/appxgen && npm run build && cd ../../dev/appxgen-nextjs && npm run build",
+    "build:react": "cd lib/appxgen && npm run build && cd ../../dev/appxgen-nextjs && npm run build",
     "test": "jest --runInBand",
     "export": "cd lib/appxgen && npm run export",
     "publish": "cd lib/appxgen && npm publish",
