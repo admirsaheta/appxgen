@@ -5,7 +5,7 @@ import { ContentProvider } from 'appxgen'
 const Index = (props) => {
   return (
     <div style={{ height: '100%' }}>
-      <ContentProvider {...props} />
+      <ContentProvider {...props} showEditorInProd={true} />
     </div>
   )
 }
